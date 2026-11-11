@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка компании</title>
+    <link href="https://cdn.jsdelivr.net/npm/@dadata/suggestions@latest/dist/suggestions.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class="top-buttons">
+        <button id="generalCard">Заполнить от лица директора</button>
+    </div>
+
+    <main id="container">
+        
+        <div id="editForm" class="hidden">
+            <h3>Редактировать данные</h3>
+            <input type="text" id="inputSite" placeholder="Ссылка на сайт (например, https://site.ru)">
+            <input type="text" id="inputPhone" placeholder="Контактный телефон">
+            <button id="saveBtn">Сохранить</button>
+        </div>
+
+        <header id="head">
+            <h1>Сайт-визитка</h1>
+            <h2>Название фирмы</h2>
+        </header>
+
+        <div id="secondBlock">
+            <div id="info">
+                <h3>Основной сайт:</h3>
+                <a href="#" id="displaySite" class="site-link">www.example.com</a>
+            </div>
+            
+            <div id="location">
+                <h3>Поиск объектов</h3>
+                <div class="search-box">
+                    <input type="text" id="address" placeholder="Введите адрес">
+                    <button id="addressSubmit">Найти</button>               
+                </div>
+                <div id="output"></div>
+                <iframe id="MapFrame" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d341837368bc5737675cd13e3ef0b6a48759428fcdae6b384a60e1a7a75f8cd&amp;source=constructor" width="100%" height="200" style="display: none;"></iframe>
+                <p class="city-note">Главный офис в вашем городе</p>
+            </div>
+
+            <div id="sonSecondB">
+                <button id="headList">Товары и услуги</button>
+                <ul>
+                    <li>Контактные данные: <span id="displayPhone">+7 (999) 000-00-00</span></li>
+                    <li>Номер телефона: <span>+7 (999) 111-11-11</span></li>
+                </ul>
+            </div>  
+        </div>      
+    </main>
+
+    <button id="WAFLIST">
+        <img src="logo/-O5WCo2ckfqgVmuEtmXQkStPpwgE_YQhs7I2jhe5yw8qJPlN2485qwvPObfXvrNeJ1zGjZDUKj328BCL6jILa41E.jpg" alt="Чат">
+    </button>
+
+    <div id="generalContainer" class="hidden">
+        <header class="hd">
+            <img src="https://autosender.ru/w/avatar.jpg" class="rowX" alt="avatar">
+            <div class="hd-info">
+                <h1 class="hh">Web-helper</h1>
+                <span class="status">онлайн</span>
+            </div>
+        </header>
+        <div class="top">
+            <div class="message">
+                <img src="https://autosender.ru/w/avatar.jpg" class="row" alt="avatar">
+                <p class="pad">Здравствуйте, чем могу вам помочь?</p>
+            </div>
+            <p class="padTwo">Если нужна будет помощь, я здесь</p>
+        </div>
+    </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/@dadata/suggestions@latest/dist/suggestions.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

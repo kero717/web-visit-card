@@ -1,0 +1,352 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eef2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.top-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.top-buttons button {
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.top-buttons button:hover {
+    background-color: #1a252f;
+}
+
+.guest-text {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+#container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    position: relative;
+}
+
+#editForm {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid #eaeaea;
+    animation: fadeIn 0.3s ease;
+}
+
+#editForm h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#editForm input {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+#editForm input:focus {
+    border-color: #3498db;
+}
+
+#editForm button {
+    padding: 12px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#editForm button:hover {
+    background-color: #27ae60;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#head {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#head h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#head h2 {
+    font-size: 18px;
+    color: #7f8c8d;
+    font-weight: 400;
+}
+
+#secondBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+#info h3, #location h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.site-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#address {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+#address:focus {
+    border-color: #3498db;
+}
+
+#addressSubmit {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#MapFrame {
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.city-note {
+    font-size: 13px;
+    color: #95a5a6;
+    text-align: center;
+}
+
+#sonSecondB {
+    grid-column: 1 / -1;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#headList {
+    background: transparent;
+    border: none;
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#sonSecondB ul {
+    list-style: none;
+}
+
+#sonSecondB li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+    color: #555;
+}
+
+#sonSecondB li:last-child {
+    border-bottom: none;
+}
+
+#sonSecondB li span {
+    font-weight: 600;
+    color: #2c3e50;
+    float: right;
+}
+
+#WAFLIST {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: transform 0.2s;
+}
+
+#WAFLIST:hover {
+    transform: scale(1.05);
+}
+
+#WAFLIST img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#generalContainer {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 320px;
+    background-color: #f0f0f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s;
+}
+
+.hidden {
+    display: none !important;
+    opacity: 0;
+}
+
+.hd {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;   
+}
+
+.rowX, .row {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hd-info {
+    display: flex;
+    flex-direction: column;  
+}
+
+.hh {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.status {
+    font-size: 12px;
+    color: #2ecc71;        
+}
+
+.status::before {            
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2ecc71;
+    margin-right: 4px;
+}
+
+.top {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.message {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.pad {
+    background-color: #fff;
+    padding: 10px 14px;
+    border-radius: 12px 12px 12px 0;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+.padTwo {
+    background-color: #fff;
+    padding: 10px 14px;
+    border-radius: 12px 12px 0 12px;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    align-self: flex-end;
+    max-width: 80%;
+}
+
+@media (max-width: 600px) {
+    #secondBlock {
+        grid-template-columns: 1fr;
+    }
+    .top-buttons {
+        flex-direction: column;
+        text-align: center;
+    }
+}
